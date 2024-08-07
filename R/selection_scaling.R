@@ -6,17 +6,17 @@
 #' @examples
 #' variable_features("input.rds")
 #' @export
-#' 
 variable_features <- function(input){
-   normalized <- readRDS("input")
+   normalized <- readRDS(input)
    normalized <- Seurat::FindVariableFeatures(normalized, selection.method = "vst", nfeatures = 2000)
    
    top10 <- head(Seurat::VariableFeatures(normalized), 10)
    
-   plot1 <- VariableFeaturePlot(normalized)
-   LabelPoints(plot = plot1, points = top10, repel = TRUE)
+   plot1 <- Seurat::VariableFeaturePlot(normalized)
+   plot2 <- Seurat::LabelPoints(plot = plot1, points = top10, repel = TRUE)
+   finalplots <- plot1 + plot2
    
-   ggplot2::ggsave(filename = variable_features_plot.png)
+   ggplot2::ggsave(finalplots, filename = "variable_features_plot.png")
    saveRDS(top10, file = "top10_variablefeatures.rds")
    saveRDS(normalized, file = "variablefeatures.rds")
 }
@@ -24,5 +24,6 @@ variable_features <- function(input){
 scaling_seurat <- function(input){
    for_scaling <- readRDS(input)
    all.genes <- rownames(for_scaling)
-   scaling <- Seurat::ScaleData(input, features = all.genes)
+   for_scaling <- Seurat::ScaleData(for_scaling, features = all.genes)
+   saveRDS(for_scaling, file = "after_scaling.rds")
 }
