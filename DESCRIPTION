@@ -1,4 +1,4 @@
-Package: selection-scaling-seurat
+Package: selectionscalingseurat
 Type: Package
 Title: Selection of Highly Variable Features and Scaling of Seurat Object
 Version: 0.0.1.0
