@@ -1,0 +1,6 @@
+Package: selection-scaling-seurat
+Type: Package
+Title: Selection of Highly Variable Features and Scaling of Seurat Object
+Version: 0.0.1.0
+Encoding: UTF-8
+RoxygenNote: 7.3.2
