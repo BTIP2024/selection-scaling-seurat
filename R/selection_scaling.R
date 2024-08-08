@@ -16,7 +16,7 @@ variable_features <- function(input){
    plot2 <- Seurat::LabelPoints(plot = plot1, points = top10, repel = TRUE)
    finalplots <- plot1 + plot2
    
-   ggplot2::ggsave(finalplots, filename = "variable_features_plot.png")
+   ggplot2::ggsave(finalplots, filename = "variable_features_plot.png", width = 15, height = 8, dpi = 300)
    saveRDS(top10, file = "top10_variablefeatures.rds")
    saveRDS(normalized, file = "variablefeatures.rds")
 }
