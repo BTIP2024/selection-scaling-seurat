@@ -7,7 +7,7 @@
 variable_features(input)
 }
 \arguments{
-\item{input}{is the file after variable feature selection and scaling of the seurat object}
+\item{input}{is the file after the normalization of the seurat object}
 }
 \description{
 This package contains functions that identifies the variable features in a seurat object after quality filtering and normalization. The second function is scaling which should be done after variable feature identification.
