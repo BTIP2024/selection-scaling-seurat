@@ -3,7 +3,7 @@ This package contains two functions a) `variable_features()` and b) `scaling_seu
 
 The `variable_features()` function calculated which genes have high cell-to-cell variation in the dataset and will be used to distinguish cell types. 
 
-The `scaling_seurat` function removes unwanted sources of variation to ensure that the succeeding clusterings (for dimensionality reduction) are due to actual differences in gene expression and not due to unwanted sources of variations.
+The `scaling_seurat()` function removes unwanted sources of variation to ensure that the succeeding clusterings (for dimensionality reduction) are due to actual differences in gene expression and not due to unwanted sources of variations.
 
 ## Installation
 The package can be installed using
