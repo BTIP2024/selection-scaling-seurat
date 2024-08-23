@@ -1,5 +1,5 @@
 # selection-scaling-seurat
-This package contains two functions a) `variable_features()` and b) `scaling_seurat` which correspond to the third (3rd) and fourth (4th) steps of the standard scRNAseq processing workflow.
+This package contains two functions a) `variable_features()` and b) `scaling_seurat()` which correspond to the third (3rd) and fourth (4th) steps of the standard scRNAseq processing workflow.
 
 The `variable_features()` function calculated which genes have high cell-to-cell variation in the dataset and will be used to distinguish cell types. 
 
